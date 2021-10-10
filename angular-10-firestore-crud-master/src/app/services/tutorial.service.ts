@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
-import Tutorial from '../models/tutorial';
+import Tutorial from '../models/tutorial.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TutorialService {
-
   private dbPath = '/tutorials';
 
-  tutorialsRef: AngularFirestoreCollection<Tutorial> = null;
+  tutorialsRef: AngularFirestoreCollection<Tutorial>;
 
   constructor(private db: AngularFirestore) {
     this.tutorialsRef = db.collection(this.dbPath);

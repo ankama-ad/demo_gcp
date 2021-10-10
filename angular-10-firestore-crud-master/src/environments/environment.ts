@@ -10,5 +10,3 @@ export const environment = {
     measurementId: "G-0ZBY619RYL"
   }
 };
-
-// databaseURL: 'https://bezkoder-firebase.firebaseio.com',
